@@ -1,7 +1,7 @@
 require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
-const authenticate = require('./middleware/authenticate');
+const userRouter = require('./routes/user');
 
 const DB_CONFIG = {
     useNewUrlParser: true,
@@ -17,6 +17,9 @@ mongoose.connect(process.env.DB_CONNECTION_URI, DB_CONFIG, err => {
 });
 
 const app = express();
+app.use(express.urlencoded({extended: true}));
+app.use(express.json());
+app.use('/', userRouter);
 
 const PORT = process.env.PORT || 3001;
 
