@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const userRouter = require('./routes/user');
+const merchantRouter = require('./routes/merchant');
 
 const DB_CONFIG = {
     useNewUrlParser: true,
@@ -20,6 +21,7 @@ const app = express();
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use('/', userRouter);
+app.use('/', merchantRouter);
 
 const PORT = process.env.PORT || 3001;
 
