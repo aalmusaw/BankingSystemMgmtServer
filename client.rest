@@ -23,3 +23,21 @@ Content-Type: application/json
     "name": "London Hydro"
 }
 
+### create a customer
+POST http://localhost:3001/customer
+Content-Type: application/json
+
+{
+    "email": "almuali699@gmail.com",
+    "fname": "Ali",
+    "lname": "Al-Musawi"
+}
+
+### create an account
+POST http://localhost:3001/account
+Content-Type: application/json
+
+{
+    "email": "almuali699@gmail.com",
+    "number": "1111222233334444"
+}
