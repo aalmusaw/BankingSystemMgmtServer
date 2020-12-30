@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const userRouter = require('./routes/user');
 const merchantRouter = require('./routes/merchant');
+const customerRouter = require('./routes/customer');
 
 const DB_CONFIG = {
     useNewUrlParser: true,
@@ -22,6 +23,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 app.use('/', userRouter);
 app.use('/', merchantRouter);
+app.use('/', customerRouter);
 
 const PORT = process.env.PORT || 3001;
 
