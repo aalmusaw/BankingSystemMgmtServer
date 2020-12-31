@@ -9,7 +9,7 @@ const Transaction = new Schema({
 
 const Account = new Schema({
     number: {type: String, unique: true, required: true},
-    balance: {type: Schema.Types.Decimal128, default: 0},
+    balance: {type: Schema.Types.Decimal128, default: 0, min: 0},
     transactions: {type: [Transaction]}
 });
 
