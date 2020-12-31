@@ -41,3 +41,25 @@ Content-Type: application/json
     "email": "almuali699@gmail.com",
     "number": "1111222233334444"
 }
+
+### change account balance: increase by 4000
+POST http://localhost:3001/account/changeBalance
+Content-Type: application/json
+
+{
+    "accountNumber": "1111222233334444",
+    "amount": "4000",
+    "detail": "IBM Monthly Salary "
+
+}
+
+### change account balance: decrease by 6000
+POST http://localhost:3001/account/changeBalance
+Content-Type: application/json
+
+{
+    "accountNumber": "1111222233334444",
+    "amount": "-6000",
+    "detail": "Purchase from Canadian Tire"
+
+}
