@@ -42,24 +42,24 @@ Content-Type: application/json
     "number": "1111222233334444"
 }
 
-### change account balance: increase by 4000
+### change account balance: increase
 POST http://localhost:3001/account/changeBalance
 Content-Type: application/json
 
 {
-    "accountNumber": "1111222233334444",
-    "amount": "4000",
-    "detail": "IBM Monthly Salary "
+    "accountNumber": "5555666677778888",
+    "amount": 10000,
+    "detail": "ATM Cash Deposit"
 
 }
 
-### change account balance: decrease by 6000
+### change account balance: decrease 
 POST http://localhost:3001/account/changeBalance
 Content-Type: application/json
 
 {
-    "accountNumber": "1111222233334444",
-    "amount": "-6000",
-    "detail": "Purchase from Canadian Tire"
+    "accountNumber": "5555666677778888",
+    "amount": "-11.50",
+    "detail": "Purchase from USC Spoke"
 
 }

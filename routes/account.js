@@ -79,13 +79,14 @@ route.post('/account/changeBalance', (req, res, next) => {
             // retrieve the account
             const account = doc.accounts.filter(acc => acc.number == accountNumber)[0];
             // if this is a charge and the account has less than the charge
-            if (amount < 0 && account.balance < -1*amount) {
+            if (amount < 0 && parseFloat(account.balance) < -1*amount) {
                 res.status(400).json({
                     message: 'Insufficient Balance'
                 });
             } 
             else {
-                account.balance += amount;
+                const newBalance = parseFloat(account.balance) + amount;
+                account.balance = newBalance.toString();
                 account.transactions.push(transaction);
                 doc.save();
                 res.sendStatus(201);
