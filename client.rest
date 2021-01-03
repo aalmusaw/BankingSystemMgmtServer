@@ -1,13 +1,14 @@
-### register a user
+### register a new user (for logging in purposes) with email address abc@yahoo.com 
+### and password mypass passed as JSON
 POST http://localhost:3001/user
 Content-Type: application/json
 
 {
     "email": "abc@yahoo.com",
-    "password": "kamigamiX0!"
+    "password": "mypass"
 }
 
-### delete a user
+### delete a user (for logging in purposes) with email address abc@yahoo.com passed as JSON
 DELETE http://localhost:3001/user
 Content-Type: application/json
 
@@ -15,7 +16,7 @@ Content-Type: application/json
     "email": "abc@yahoo.com"
 }
 
-### create a merchant
+### create a merchant with the name passed as JSON
 POST http://localhost:3001/merchant
 Content-Type: application/json
 
@@ -23,7 +24,7 @@ Content-Type: application/json
     "name": "London Hydro"
 }
 
-### create a customer
+### create a customer (for banking purposes)
 POST http://localhost:3001/customer
 Content-Type: application/json
 
@@ -33,7 +34,9 @@ Content-Type: application/json
     "lname": "Al-Musawi"
 }
 
-### create an account
+### create a banking account for the banking customer with email
+### email address almuali699@gmail.com and give an account number
+### which must be a 16 digit identifier passed as JSON
 POST http://localhost:3001/account
 Content-Type: application/json
 
