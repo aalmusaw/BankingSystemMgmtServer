@@ -24,7 +24,7 @@
 1. Install angular if you have not. Details are [here](https://angular.io/guide/setup-local).
 1. Register the first customer, set them up with a banking account, then give them login credentials:
     1. Run the management server by navigating to the local repository and running `npm run devStart`.
-    1. Use VSCode's (REST Client extension)[https://marketplace.visualstudio.com/items?itemName=humao.rest-client] or (Postman's REST client)[https://www.postman.com/product/rest-client/] to make API requests.
+    1. Use VSCode's [REST Client extension](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) or [Postman's REST client](https://www.postman.com/product/rest-client/) to make API requests.
     1. Refer to the file **client.rest** in the local repositories for examples on how to make the above requests.
 1. Run the customer and authentication servers by spawning instances of terminals/cmd and running `npm run devStart`.
 1. Finally, run the fontend application by navigating to the angular app and running `ng serve --open`.
